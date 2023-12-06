@@ -1,0 +1,338 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!-- pause and play video icons :-->
+   <!-- <i class="fa-solid fa-pause"></i>-->
+   <!-- <i class="fa-solid fa-play"></i>-->
+   <meta charset="UTF-8">
+   <!-- <meta http-equiv="refresh" content="3"> -->
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description" content="Image filters filter Eiter Editor Videos Colors ColorEditer VideoEditor img Wallpaper">
+   <!-- the link to font-awesome icons-->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--  Bootstap css  -->
+    <link rel="stylesheet" href="HomePage/css/bootstrap.css">
+   <title>FodeT</title>
+   <style>
+   body{
+      height: 100vh;
+      width: 100%;
+      background: #122;
+   }
+   .nav{
+      background:transparent;
+      color: #fff;
+   }
+   .logo{
+      padding: 8px 30px;
+      font-weight: 700;
+      font-size: 26px;
+   }
+   .container{
+      border-radius: 12px;
+      box-shadow: 1px 0 8px #fff;
+   }
+   .filters{
+      padding: 10px 30px;
+   }
+   .container label{color: #fff;}
+   .image{
+      position: relative;
+      height: 80vh;
+      padding-left: 10px;
+   }
+   .filters{
+      position:relative;
+      height: 80vh;
+   }
+   #foto-img{
+      height: 80%;
+      background: black;
+      margin-top: 10px;
+      border-radius: 4px;
+   }
+   .Foto-Label{
+     position: absolute;
+     bottom: 6%;
+     left: 50%;
+      translate: -50% 0;
+      border: dashed 1px #fff;
+      padding: 10px;
+      color: #fff;
+   }
+   .filters li a{
+      background: green;
+      padding: 7px 24px;
+      text-decoration: none;color: #ffff;
+      border-radius: 12px;
+   }
+   .filters li input{
+      outline: 0;
+      border: 0;
+      font-weight: 500;
+      color: #dfff;
+       background: green;
+      padding: 7px 24px; 
+      border-radius: 12px;
+   }
+   .filters li input:hover,.filters a:hover{
+      background-color: transparent;
+      border: solid green 2px;
+   }
+
+            /* Styling the nav Bar */
+   .navBar{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: .4rem;
+   }
+   .navBar p{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: column;
+      flex-grow: 1;
+   } 
+   .navBar p a {
+      color: #ffff;
+      padding:2px 5px;
+      border-radius: 50%;
+   }
+   .navBar p #fa:hover{
+      font-size: 1.2rem;
+      /* background: rgba(17, 33, 153, 0.549); */
+      color: #000;
+      background: orange;
+   }
+   .navBar p small {
+      margin-top: 20px;
+   }
+   .navBar p small a{
+      position: relative;
+      color: #000;
+      background: #ffff;
+      text-decoration: none;
+      padding:4px 6px 4px 6px;
+      border-radius: 12px;
+   }
+   .navBar p small a:before{
+      content: '';
+      position: absolute;
+      left: 45%;
+      top: -10%;
+      height: 1rem;
+      width:1rem;
+      background: #fff;
+      rotate: 45deg;
+      z-index: -23;
+   }
+   .navBar p small{
+      /* visibility:hidden; */
+      opacity: 0;
+   }
+   .navBar p #fa:hover+small{
+      /* visibility: visible; */
+     opacity: 1;
+   }
+   @media screen and (max-width:600px) {
+      body{
+         height: 100vh;
+      }
+      .navBar p small{
+         display: none;
+      }
+      .image{
+      max-height: 40vh;
+      max-width: 100%;
+      }
+      .Foto-Label{
+      position: absolute;
+      bottom: -2%;
+      left: 50%;
+         border: dashed 1px #fff;
+         padding: 10px;
+         color: #fff;
+      }
+
+   }
+   </style>
+</head>
+<body>
+    <div class="nav align-items-center">
+      <h1 class="col-4 logo d-lg-flex">Fode<b style="color: orangered;">T</b></h1>
+      <div class="navBar">
+            <p>
+               <a id="fa" href="https://github.com" target="_blank"><i class="fa-solid fa-people-roof" id="Portfolio" title="My Portfolio"></i></a>
+               <small for="Portfolio"><a href="https://github.com" target="_blank">Portfolio</a></small>
+            </p>
+            <p> 
+               <a id="fa" href="#" target="_blank"><i class="fa-brands fa-slack" id="OtherProjects" title="Other Projects"></i></a>
+               <small for="OtherProjects"><a href="#" target="_blank">Other Projects</a></small>
+            </p>
+            <p>
+               <a id="fa" href="#" target="_blank"><i class="fa-solid fa-briefcase" id="Hire" title="Hire Me"></i></a>
+               <small for="Hire"><a href="#" target="_blank">Let's Talk Business</a></small>
+            </p>
+            <p>
+               <a id="fa" href="tagrawla2023@gmail.com" target="_blank"><i class="fa-regular fa-envelope" id="Contact" title="Contact"></i></a>
+               <small for="Contact"><a href="tagrawla2023@gmail.com" target="_blank">Contact Us</a></small>
+            </p>
+            <p>
+               <a id="fa" href="#" target="_blank"><i class="fa-brands fa-github" id="GitHube" title="Git Hube Account"></i></a>
+               <small for="GitHube"><a href="#" target="_blank">Git Hube</a></small>
+            </p>
+            <p class="flex-grow-1 ">
+               <a id="fa" href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin" id="LinkedIn" title="LinkedIn"></i></a>
+               <small for="LinkedIn"><a href="https://www.linkedin.com/" target="_blank">LinkedIn</a></small>
+            </p>
+            <p>
+               <a id="fa" href="https://www.bing.com/ck/a?!&&p=030f89fe0132a34dJmltdHM9MTY5OTkyMDAwMCZpZ3VpZD0xM2NjZmU3YS04YjUxLTY3YjEtMjBmZS1lZDVkOGE1OTY2NDUmaW5zaWQ9NTE2NA&ptn=3&ver=2&hsh=3&fclid=13ccfe7a-8b51-67b1-20fe-ed5d8a596645&psq=youtube&u=a1aHR0cHM6Ly93d3cueW91dHViZS5jb20v&ntb=1" target="_blank"><i class="fa-brands fa-youtube" id="YouTube" title="Youtube Cannel"></i></a>
+               <small for="YouTube"><a href="https://www.bing.com/ck/a?!&&p=030f89fe0132a34dJmltdHM9MTY5OTkyMDAwMCZpZ3VpZD0xM2NjZmU3YS04YjUxLTY3YjEtMjBmZS1lZDVkOGE1OTY2NDUmaW5zaWQ9NTE2NA&ptn=3&ver=2&hsh=3&fclid=13ccfe7a-8b51-67b1-20fe-ed5d8a596645&psq=youtube&u=a1aHR0cHM6Ly93d3cueW91dHViZS5jb20v&ntb=1" target="_blank">Youtube Channel</a></small>
+            </p>
+            <p>
+               <a id="fa" href="https://www.facebook.com/" id="facebook" title="Facebook Cannel" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+               <small for="facebook"><a href="https://www.facebook.com/" id="facebook" title="Facebook Cannel" target="_blank">Facebook</a></small>
+            </p>
+      </div>
+    </div>
+
+    <div class="container container-lg">
+      <div class="row  d-flex flex-md-row justify-content-between align-items-center">
+         <div class="image col-lg-8 col-md-6 col-sm-12 justify-content-center">
+            <!-- ./Images/collegs.webp -->
+            <img src="" class="image col-12" id="foto-img" style="display: none;">
+            <input type="file" name="fileName" style="display: none;" id="Foto-file" >
+            <label class="Foto-Label" for="Foto-file">Upload</label>
+         </div>
+         <div class="filters col-lg-4 col-md-6 col-sm-12 ">
+            <label  for=" saturate" class="col-12 fw-bold"> saturate</label>
+            <input type="range" name="" id=" saturate" class="col-12">
+            <label  for="blur" class="col-12 fw-bold">Blur</label>
+            <input type="range" name="" id="blur" class="col-12">
+            <label  for="brightness" class="col-12 fw-bold">brightness</label>
+            <input type="range" name="" id="brightness" class="col-12">
+            <label  for="hue-rotate" class="col-12 fw-bold">hue-rotate</label>
+            <input type="range" name="" id="hue-rotate" class="col-12">
+            <label  for="contrast" class="col-12 fw-bold">contrast</label>
+            <input type="range" name="" id="contrast" class="col-12">
+            <label  for="grayscale" class="col-12 fw-bold">grayscale</label>
+            <input type="range" name="" id="grayscale" class="col-12">
+            <label  for="invert" class="col-12 fw-bold">invert</label>
+            <input type="range" name="" id="invert" class="col-12">
+            <label  for="sepia" class="col-12 fw-bold">sepia</label>
+            <input type="range" name="" id="sepia" class="col-12">
+            <label  for="opacity" class="col-12 fw-bold">opacity</label>
+            <input type="range" name="" id="opacity" class="col-12">
+                          <!-- Reset && Download -->
+            <li class="col-12" style="margin-top: 20px; list-style: none; display: flex; align-items: center; justify-content: space-around;">
+                <input type="reset" value="Reset">
+                <a href="#" id="downloadLink">Download</a>
+            </li>
+         </div>
+      </div>
+    </div>
+    <!-- <script src="Movies.js"> </script> -->
+   
+  <script>
+   // Get the image element
+   const image = document.getElementById('foto-img');
+   // Object to store applied filters
+   let appliedFilters = {};
+   // Get all range input elements
+   const rangeInputs = document.querySelectorAll('input[type="range"]');
+   
+   // Add event listeners to each range input
+   rangeInputs.forEach(input => {
+   input.addEventListener('input', applyFilter);
+   });
+
+   // Function to apply filter based on the input label
+   function applyFilter(event) {
+   const filterName = event.target.id;
+   const filterValue = event.target.value;
+
+   // Update appliedFilters object with the filter and its value
+   appliedFilters[filterName] = `${filterName}(${filterValue}${getFilterUnit(filterName)})`;
+
+   // Apply accumulated filters to the image
+   image.style.filter = Object.values(appliedFilters).join(' ');
+   }
+
+   // Function to get the appropriate unit for each filter
+   function getFilterUnit(filterName) {
+      // Define units for different filters as needed
+      const units = {
+      saturate: '%',
+      blur: 'px',
+      brightness: '%',
+      'hue-rotate': 'deg',
+      contrast: '%',
+      grayscale: '%',
+      invert: '%',
+      sepia: '%',
+      opacity: '%'
+      // Add more filters and units if needed
+  };
+  return units[filterName] || ''; // Return the unit or empty string if not found
+}
+
+   // Reset button functionality
+   const resetButton = document.querySelector('input[type="reset"]');
+   resetButton.addEventListener('click', () => {
+   rangeInputs.forEach(input => {
+      // Reset each range input value to default
+      input.value = 50; // Set default value as needed
+   });
+   // Clear applied filters and reset image filter
+   appliedFilters = {};
+   image.style.filter = 'none';
+   });
+   // Upload button functionality
+   const uploadInput = document.getElementById('Foto-file');
+   uploadInput.addEventListener('change', (event) => {
+      rangeInputs.forEach(input => {
+      // Reset each range input value to default
+      input.value = 50; // Set default value as needed
+      });
+   image.style.display = 'block';
+   const selectedFile = event.target.files[0];
+   if (selectedFile) {
+      const reader = new FileReader();
+      reader.onload = function (e) {
+         // Reset image source and filters
+         image.src = e.target.result;
+         image.style.filter = 'none';
+         appliedFilters = {};
+      };
+      reader.readAsDataURL(selectedFile);
+   }
+   });
+
+   // Download button functionality
+   const downloadButton = document.getElementById('downloadLink');
+   downloadButton.addEventListener('click', () => {
+   // Create a temporary canvas element
+   const canvas = document.createElement('canvas');
+   const ctx = canvas.getContext('2d');
+
+   // Set canvas dimensions to image dimensions
+   canvas.width = image.naturalWidth || image.width;
+   canvas.height = image.naturalHeight || image.height;
+
+   // Apply filters to the canvas before downloading
+   const filterStyle = Object.values(appliedFilters).join(' ');
+   ctx.filter = filterStyle;
+   ctx.drawImage(image, 0, 0);
+
+   // Convert canvas content to image data URL and initiate download
+   const link = document.createElement('a');
+   link.href = canvas.toDataURL("image/png");
+   link.download = 'filtered_image.png'; 
+   link.click();
+   });
+  </script>
+</body>
+</html>
